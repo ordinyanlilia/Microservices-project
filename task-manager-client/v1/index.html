@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        
+        <!-- Auth Forms Container -->
+        <div id="auth-forms">
+            <!-- Register Form -->
+            <div class="form-container" id="register-container">
+                <h2>Register</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-name">Name</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+            </div>
+            
+            <!-- Login Form -->
+            <div class="form-container" id="login-container">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+            </div>
+        </div>
+        
+        <!-- Main App Container (Hidden initially) -->
+        <div id="app-container" class="hidden">
+            <div class="user-info">
+                <p>Welcome, <span id="user-name"></span></p>
+                <button id="logout-btn">Logout</button>
+            </div>
+            
+            <!-- Add Task Form -->
+            <div class="add-task-container">
+                <h2>Add New Task</h2>
+                <form id="add-task-form">
+                    <div class="form-group">
+                        <label for="task-title">Title</label>
+                        <input type="text" id="task-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-description">Description</label>
+                        <textarea id="task-description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-due-date">Due Date</label>
+                        <input type="datetime-local" id="task-due-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="task-priority">Priority</label>
+                        <select id="task-priority">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-status">Status</label>
+                        <select id="task-status">
+                            <option value="to-do" selected>To Do</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    <button type="submit">Add Task</button>
+                </form>
+            </div>
+            
+            <!-- Task Filters -->
+            <div class="filters-container">
+                <h2>Filters</h2>
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="filter-status">Status</label>
+                        <select id="filter-status">
+                            <option value="">All</option>
+                            <option value="to-do">To Do</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-priority">Priority</label>
+                        <select id="filter-priority">
+                            <option value="">All</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-by">Sort By</label>
+                        <select id="sort-by">
+                            <option value="createdAt">Creation Date</option>
+                            <option value="dueDate">Due Date</option>
+                            <option value="priority">Priority</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-order">Order</label>
+                        <select id="sort-order">
+                            <option value="asc">Ascending</option>
+                            <option value="desc">Descending</option>
+                        </select>
+                    </div>
+                    <button id="apply-filters-btn">Apply Filters</button>
+                </div>
+            </div>
+            
+            <!-- Tasks List -->
+            <div class="tasks-container">
+                <h2>Your Tasks</h2>
+                <div id="tasks-list">
+                    <!-- Tasks will be added here dynamically -->
+                </div>
+            </div>
+            
+            <!-- Edit Task Modal -->
+            <div id="edit-task-modal" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2>Edit Task</h2>
+                    <form id="edit-task-form">
+                        <input type="hidden" id="edit-task-id">
+                        <div class="form-group">
+                            <label for="edit-task-title">Title</label>
+                            <input type="text" id="edit-task-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-task-description">Description</label>
+                            <textarea id="edit-task-description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-task-due-date">Due Date</label>
+                            <input type="datetime-local" id="edit-task-due-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-task-priority">Priority</label>
+                            <select id="edit-task-priority">
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-task-status">Status</label>
+                            <select id="edit-task-status">
+                                <option value="to-do">To Do</option>
+                                <option value="in-progress">In Progress</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                        </div>
+                        <button type="submit">Update Task</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Status Messages -->
+        <div id="status-message"></div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
