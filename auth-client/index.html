@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Microservice Client</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Auth Microservice Demo</h1>
+        
+        <!-- Auth Forms Container -->
+        <div id="auth-forms">
+            <!-- Register Form -->
+            <div class="form-container" id="register-container">
+                <h2>Register</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-name">Name</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+            </div>
+            
+            <!-- Login Form -->
+            <div class="form-container" id="login-container">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+            </div>
+        </div>
+        
+        <!-- Profile Container (Hidden initially) -->
+        <div id="profile-container" class="hidden">
+            <h2>User Profile</h2>
+            <div id="profile-info">
+                <!-- Profile info will be populated here -->
+            </div>
+            <button id="logout-btn">Logout</button>
+        </div>
+        
+        <!-- Status Messages -->
+        <div id="status-message"></div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
