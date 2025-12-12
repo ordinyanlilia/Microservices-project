@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimable | Software Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <style>
+        .hero-bg {
+            background-color: #0f2942;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .tech-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-right: 4px;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-black text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-blue-400">A</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-blue-400">Home</a>
+                <a href="#about" class="hover:text-blue-400">About Me</a>
+                <a href="#skills" class="hover:text-blue-400">Skills</a>
+                <a href="#projects" class="hover:text-blue-400">Projects</a>
+                <a href="#resume" class="hover:text-blue-400">Resume</a>
+            </div>
+            <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Contact Me</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 flex flex-col justify-center items-start">
+                <h2 class="text-xl font-light mb-1">Hey, I'm Aimable</h2>
+                <h1 class="text-5xl font-bold mb-4">
+                    <span class="text-blue-400">Software Engineer</span> | 
+                    <span class="text-gray-300">Cloud Architect</span>
+                </h1>
+                <p class="text-xl mb-8">Transforming complex problems into elegant, scalable solutions. Passionate Towson University senior specializing in microservices architecture and cloud-native applications.</p>
+                <div class="flex space-x-4">
+                    <button class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold">Get In Touch</button>
+                    <button class="border border-white hover:bg-white hover:text-blue-900 px-6 py-3 rounded-lg font-semibold">Resume</button>
+                </div>
+                <div class="flex mt-8 space-x-4">
+                    <a href="#" class="text-white hover:text-blue-400 text-2xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white hover:text-blue-400 text-2xl"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-white hover:text-blue-400 text-2xl"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+                <div class="relative">
+                    <div class="absolute -top-5 -right-5 w-full h-full border-4 border-blue-400 rounded-xl"></div>
+                    <img src="/api/placeholder/400/500" alt="Aimable" class="relative z-10 rounded-xl shadow-xl">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4">Technical Skills</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-3xl mx-auto">My expertise spans across multiple domains, with a recent focus on microservices architecture and cloud infrastructure.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Backend Development -->
+                <div class="skill-card bg-white rounded-xl shadow-lg p-6 transition duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-server text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Backend Development</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="w-1/2">Node.js</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">Express</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">MongoDB</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">RESTful APIs</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">JWT Auth</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Frontend Development -->
+                <div class="skill-card bg-white rounded-xl shadow-lg p-6 transition duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-indigo-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-code text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Frontend Development</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="w-1/2">HTML/CSS</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">JavaScript</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">React</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">Responsive Design</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">UI/UX</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- DevOps & Containerization -->
+                <div class="skill-card bg-white rounded-xl shadow-lg p-6 transition duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+                        <i class="fab fa-docker text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">DevOps & Containers</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="w-1/2">Docker</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">Docker Compose</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">CI/CD</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">Nginx</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">Git/GitHub</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Cloud Services -->
+                <div class="skill-card bg-white rounded-xl shadow-lg p-6 transition duration-300">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-cloud text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Cloud Services</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="w-1/2">AWS</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">EC2/S3</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">Serverless</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">Cloud Architecture</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-1/2">Deployment</span>
+                            <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Diagram -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold mb-6">Microservices Architecture Expertise</h3>
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 pr-8">
+                        <p class="text-gray-700 mb-4">My recent focus has been on building scalable microservices architecture with Docker containerization and cloud deployment. This approach offers:</p>
+                        <ul class="space-y-2 text-gray-700 mb-6">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Service isolation with independent scaling</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Resilient architecture that prevents cascading failures</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Separate databases per service for data integrity</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>API Gateway pattern for unified client access</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="/api/placeholder/600/300" alt="Microservices Architecture Diagram" class="rounded-lg shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4">Featured Projects</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-3xl mx-auto">Explore my recent work showcasing microservices architecture and cloud deployment strategies.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1: Task Management System -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300">
+                    <img src="/api/placeholder/600/300" alt="Task Management Microservices" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tech-badge bg-blue-100 text-blue-800">Docker</span>
+                            <span class="tech-badge bg-green-100 text-green-800">Node.js</span>
+                            <span class="tech-badge bg-yellow-100 text-yellow-800">MongoDB</span>
+                            <span class="tech-badge bg-purple-100 text-purple-800">Nginx</span>
+                            <span class="tech-badge bg-red-100 text-red-800">JWT</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Task Management Microservices</h3>
+                        <p class="text-gray-700 mb-4">A complete task management application built using microservices architecture. Features user authentication, task CRUD operations, notifications, and more.</p>
+                        <div class="flex flex-col space-y-2">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-eye mr-2"></i> View Demo
+                            </button>
+                            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-github mr-2"></i> View Code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: E-commerce Platform -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300">
+                    <img src="/api/placeholder/600/300" alt="E-commerce Microservices" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex flex-wrap mb-4">
+                            <span class="tech-badge bg-blue-100 text-blue-800">Docker</span>
+                            <span class="tech-badge bg-green-100 text-green-800">Express</span>
+                            <span class="tech-badge bg-indigo-100 text-indigo-800">React</span>
+                            <span class="tech-badge bg-purple-100 text-purple-800">AWS</span>
+                            <span class="tech-badge bg-pink-100 text-pink-800">CI/CD</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Cloud-Native E-commerce Platform</h3>
+                        <p class="text-gray-700 mb-4">A scalable e-commerce solution with product, cart, payment, and user services deployed on AWS with automatic CI/CD pipeline and containerization.</p>
+                        <div class="flex flex-col space-y-2">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-eye mr-2"></i> View Demo
+                            </button>
+                            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-github mr-2"></i> View Code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More Projects Button -->
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition duration-300">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4">Technical Blog</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-3xl mx-auto">Insights and tutorials about my journey with microservices and cloud technologies.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/200" alt="Docker Compose Blog" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-blue-600 font-semibold">DOCKER</span>
+                        <h3 class="text-xl font-bold mt-1 mb-2">Setting Up Multi-Container Applications with Docker Compose</h3>
+                        <p class="text-gray-700 mb-4">A step-by-step guide to orchestrating multiple containers for local development and production.</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:underline">Read More →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/200" alt="Nginx Gateway Blog" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-green-600 font-semibold">ARCHITECTURE</span>
+                        <h3 class="text-xl font-bold mt-1 mb-2">Building an API Gateway with Nginx for Microservices</h3>
+                        <p class="text-gray-700 mb-4">Learn how to configure Nginx as a reverse proxy to create a unified entry point for your microservices.</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:underline">Read More →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/200" alt="AWS Deployment Blog" class="w-full h-40 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-purple-600 font-semibold">CLOUD</span>
+                        <h3 class="text-xl font-bold mt-1 mb-2">Deploying Containerized Applications to AWS</h3>
+                        <p class="text-gray-700 mb-4">A comprehensive guide to deploying Docker containers to AWS using EC2, ECS, and load balancing.</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:underline">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 hero-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4">Let's Build Something Amazing Together</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">I'm currently available for freelance projects, internships, and full-time positions. Let's collaborate on creating scalable, cloud-native solutions.</p>
+            <button class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold text-lg">Contact Me</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <span class="text-3xl font-bold text-blue-400">A</span>
+                    <p class="mt-2 text-gray-400">© 2025 Aimable. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fas fa-envelope text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
