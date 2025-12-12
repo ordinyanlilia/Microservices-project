@@ -1,0 +1,40 @@
+# Use Nginx to serve static files
+FROM nginx:alpine
+
+# Copy client files to Nginx's html directory
+COPY . /usr/share/nginx/html/
+
+# Copy a custom nginx configuration if needed
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Create nginx config that fixes routing issues for SPA
+RUN echo 'server { \
+    listen 80; \
+    root /usr/share/nginx/html; \
+    index index.html; \
+    location / { \
+        try_files $uri $uri/ /index.html; \
+    } \
+     location /api/auth/ { \
+        proxy_pass http://secureauth:3000/api/auth/; \
+        proxy_http_version 1.1; \
+        proxy_set_header Upgrade $http_upgrade; \
+        proxy_set_header Connection "upgrade"; \
+        proxy_set_header Host $host; \
+        proxy_cache_bypass $http_upgrade; \
+    } \
+    location /api/tasks/ { \
+        proxy_pass http://task-manager-service:3001/api/tasks/; \
+        proxy_http_version 1.1; \
+        proxy_set_header Upgrade $http_upgrade; \
+        proxy_set_header Connection "upgrade"; \
+        proxy_set_header Host $host; \
+        proxy_cache_bypass $http_upgrade; \
+    } \
+}' > /etc/nginx/conf.d/default.conf
+
+# Expose port 80
+EXPOSE 80
+
+# Nginx will start automatically
+  
